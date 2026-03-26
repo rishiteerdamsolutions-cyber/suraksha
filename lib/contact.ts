@@ -1,0 +1,2 @@
+export const DISPLAY_PHONE = "9505009699";
+export const WHATSAPP_PHONE = "919505009699";

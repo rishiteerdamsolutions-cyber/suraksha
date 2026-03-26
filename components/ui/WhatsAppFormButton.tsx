@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { WHATSAPP_PHONE } from "@/lib/contact";
 
 type WhatsAppFormButtonProps = {
   className?: string;
@@ -28,7 +29,7 @@ const initialForm: PatientForm = {
 export default function WhatsAppFormButton({
   className = "",
   label = "WhatsApp",
-  phone = "9505009699",
+  phone = WHATSAPP_PHONE,
   icon
 }: WhatsAppFormButtonProps) {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,6 +1,7 @@
 import { MapPin, MessageCircle, PhoneCall } from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
 import WhatsAppFormButton from "@/components/ui/WhatsAppFormButton";
+import { DISPLAY_PHONE } from "@/lib/contact";
 
 export default function ContactSection() {
   return (
@@ -24,10 +25,10 @@ export default function ContactSection() {
               <br />
               Karimnagar - 505001
             </p>
-            <p className="mt-4 text-slate-700">Phone: 9505009699</p>
+            <p className="mt-4 text-slate-700">Phone: {DISPLAY_PHONE}</p>
             <p className="text-slate-700">Hours: Open 24 Hours</p>
             <div className="mt-6 flex flex-wrap gap-3">
-              <a href="tel:9505009699" className="btn-primary h-12 w-full gap-2 sm:w-auto">
+              <a href={`tel:${DISPLAY_PHONE}`} className="btn-primary h-12 w-full gap-2 sm:w-auto">
                 <PhoneCall className="h-4 w-4" />
                 Call Now
               </a>

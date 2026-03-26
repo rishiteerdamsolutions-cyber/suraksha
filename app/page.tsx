@@ -10,6 +10,7 @@ import InsuranceSection from "@/components/sections/InsuranceSection";
 import PhysioSection from "@/components/sections/PhysioSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import ServicesSection from "@/components/sections/ServicesSection";
+import { DISPLAY_PHONE } from "@/lib/contact";
 
 export default function Home() {
   const hospitalJsonLd = {
@@ -24,7 +25,7 @@ export default function Home() {
       addressRegion: "Telangana",
       addressCountry: "IN"
     },
-    telephone: "+91-9505009699",
+    telephone: `+91-${DISPLAY_PHONE}`,
     openingHours: "Mo-Su 00:00-23:59",
     medicalSpecialty: "Orthopedic",
     url: "https://surakshahospitalkarimnagar.com"

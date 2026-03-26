@@ -1,6 +1,7 @@
 import { Building2, MessageCircle, PhoneCall, ShieldCheck, Star } from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
 import WhatsAppFormButton from "@/components/ui/WhatsAppFormButton";
+import { DISPLAY_PHONE } from "@/lib/contact";
 
 export default function HeroSection() {
   return (
@@ -46,14 +47,14 @@ export default function HeroSection() {
                 className="h-12 flex-1 rounded-[32px] border border-transparent bg-white px-5 font-[var(--font-geist)] text-sm text-slate-700 outline-none transition focus:border-brand-primary/40"
               />
               <a
-                href="tel:9505009699"
+                href={`tel:${DISPLAY_PHONE}`}
                 className="inline-flex h-12 items-center justify-center rounded-[32px] bg-gradient-to-b from-[#0f1118] via-[#191c24] to-[#0d1016] px-6 font-[var(--font-geist)] text-sm font-medium text-white shadow-[inset_-4px_-6px_25px_0px_rgba(201,201,201,0.08),inset_4px_4px_10px_0px_rgba(29,29,29,0.24)] transition hover:brightness-110"
               >
                 Create Free Consultation
               </a>
             </div>
             <div className="mt-3 grid grid-cols-2 gap-3 sm:hidden">
-              <a href="tel:9505009699" className="btn-primary h-12 gap-2">
+              <a href={`tel:${DISPLAY_PHONE}`} className="btn-primary h-12 gap-2">
                 <PhoneCall className="h-4 w-4" />
                 Call Now
               </a>

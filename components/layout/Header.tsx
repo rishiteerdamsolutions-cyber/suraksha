@@ -1,4 +1,5 @@
 import { Activity, PhoneCall } from "lucide-react";
+import { DISPLAY_PHONE } from "@/lib/contact";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -24,7 +25,7 @@ export default function Header() {
             <Activity className="h-3.5 w-3.5 animate-pulse" />
             Live: Open 24 Hours
           </a>
-          <a href="tel:9505009699" className="btn-primary h-10 px-4 text-xs md:hidden">
+          <a href={`tel:${DISPLAY_PHONE}`} className="btn-primary h-10 px-4 text-xs md:hidden">
           <PhoneCall className="mr-1 h-3.5 w-3.5" />
           Call
           </a>
