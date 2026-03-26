@@ -1,51 +1,51 @@
-"use client";
-
-import { useState } from "react";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
 
 const reviews = [
-  "Best orthopedic hospital in Karimnagar.",
-  "Very experienced doctor for knee replacement.",
-  "Motivating and caring doctor.",
-  "Luxury hospital with minimum charges.",
-  "Excellent staff support and smooth post-surgery recovery."
+  {
+    text: "Best orthopedic hospital in Karimnagar. Treatment by Dr. Ramu is excellent.",
+    name: "Srinath R."
+  },
+  {
+    text: "Very experienced doctor for knee replacement and complicated fractures. Highly recommended.",
+    name: "Ajay G."
+  },
+  {
+    text: "My father’s ankle surgery was handled very well. Doctor is polite and motivating throughout.",
+    name: "Manoj K."
+  },
+  {
+    text: "Hospital is well maintained and offers quality treatment at affordable cost.",
+    name: "Reyansh G."
+  },
+  {
+    text: "One of the finest orthopedic and physiotherapy services in Karimnagar.",
+    name: "Sriram D."
+  },
+  {
+    text: "Very good hospital for orthopedic patients. Staff is supportive and caring.",
+    name: "Rajitha M."
+  }
 ];
 
 export default function ReviewsSection() {
-  const [index, setIndex] = useState(0);
-
-  const prev = () => setIndex((current) => (current - 1 + reviews.length) % reviews.length);
-  const next = () => setIndex((current) => (current + 1) % reviews.length);
-
   return (
     <section className="py-16 sm:py-20">
       <div className="section-shell">
         <FadeIn>
-          <h2 className="section-title text-center">What Patients Say</h2>
+          <h2 className="section-title text-center">What Our Patients Say</h2>
         </FadeIn>
-        <FadeIn className="mx-auto mt-10 max-w-3xl" delayMs={90}>
-          <div className="premium-card p-8 text-center sm:p-10">
-            <Quote className="mx-auto h-8 w-8 text-brand-accent" />
-            <p className="mt-4 text-lg font-medium text-slate-700 sm:text-xl">
-              &ldquo;{reviews[index]}&rdquo;
-            </p>
-            <div className="mt-8 flex items-center justify-center gap-3">
-              <button
-                onClick={prev}
-                className="rounded-lg border border-slate-200 p-2 text-brand-primary transition hover:bg-slate-50"
-                aria-label="Previous review"
-              >
-                <ChevronLeft className="h-5 w-5" />
-              </button>
-              <button
-                onClick={next}
-                className="rounded-lg border border-slate-200 p-2 text-brand-primary transition hover:bg-slate-50"
-                aria-label="Next review"
-              >
-                <ChevronRight className="h-5 w-5" />
-              </button>
-            </div>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {reviews.map((review, idx) => (
+            <FadeIn key={review.name} className="premium-card p-6" delayMs={80 + idx * 40}>
+              <p className="text-base text-brand-accent">⭐⭐⭐⭐⭐</p>
+              <p className="mt-3 text-sm leading-relaxed text-slate-700">&ldquo;{review.text}&rdquo;</p>
+              <p className="mt-4 text-sm font-semibold text-brand-primary">- {review.name}</p>
+            </FadeIn>
+          ))}
+        </div>
+        <FadeIn delayMs={220}>
+          <div className="mt-8 rounded-xl border border-brand-accent/35 bg-brand-accent/10 px-5 py-3 text-center text-sm font-semibold text-brand-primary sm:text-base">
+            ⭐ Rated 4.9/5 based on 170+ patient reviews
           </div>
         </FadeIn>
       </div>

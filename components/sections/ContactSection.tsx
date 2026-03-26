@@ -1,5 +1,6 @@
 import { MapPin, MessageCircle, PhoneCall } from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
+import WhatsAppFormButton from "@/components/ui/WhatsAppFormButton";
 
 export default function ContactSection() {
   return (
@@ -30,15 +31,10 @@ export default function ContactSection() {
                 <PhoneCall className="h-4 w-4" />
                 Call Now
               </a>
-              <a
-                href="https://wa.me/9505009699"
-                target="_blank"
-                rel="noreferrer"
+              <WhatsAppFormButton
                 className="btn-secondary h-12 w-full gap-2 sm:w-auto"
-              >
-                <MessageCircle className="h-4 w-4" />
-                WhatsApp
-              </a>
+                icon={<MessageCircle className="h-4 w-4" />}
+              />
             </div>
           </FadeIn>
           <FadeIn className="premium-card overflow-hidden p-2" delayMs={120}>

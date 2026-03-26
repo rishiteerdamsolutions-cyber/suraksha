@@ -1,4 +1,5 @@
 import { MessageCircle, PhoneCall } from "lucide-react";
+import WhatsAppFormButton from "@/components/ui/WhatsAppFormButton";
 
 export default function MobileStickyBar() {
   return (
@@ -8,10 +9,10 @@ export default function MobileStickyBar() {
           <PhoneCall className="h-4 w-4" />
           Call Now
         </a>
-        <a href="https://wa.me/9505009699" target="_blank" rel="noreferrer" className="btn-secondary h-12 gap-2 text-base">
-          <MessageCircle className="h-4 w-4" />
-          WhatsApp
-        </a>
+        <WhatsAppFormButton
+          className="btn-secondary h-12 gap-2 text-base"
+          icon={<MessageCircle className="h-4 w-4" />}
+        />
       </div>
     </div>
   );

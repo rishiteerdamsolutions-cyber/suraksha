@@ -1,5 +1,6 @@
 import { Building2, MessageCircle, PhoneCall, ShieldCheck, Star } from "lucide-react";
 import FadeIn from "@/components/ui/FadeIn";
+import WhatsAppFormButton from "@/components/ui/WhatsAppFormButton";
 
 export default function HeroSection() {
   return (
@@ -56,10 +57,7 @@ export default function HeroSection() {
                 <PhoneCall className="h-4 w-4" />
                 Call Now
               </a>
-              <a href="https://wa.me/9505009699" target="_blank" rel="noreferrer" className="btn-secondary h-12 gap-2">
-                <MessageCircle className="h-4 w-4" />
-                WhatsApp
-              </a>
+              <WhatsAppFormButton className="btn-secondary h-12 gap-2" icon={<MessageCircle className="h-4 w-4" />} />
             </div>
 
             <div className="mt-5 flex flex-wrap items-center gap-3">
