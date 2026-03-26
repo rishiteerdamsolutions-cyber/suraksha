@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand-primary: #0b3c5d;
+  --brand-accent: #c9a14a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-700 antialiased;
+}
+
+.section-shell {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.section-title {
+  @apply text-3xl font-semibold text-brand-primary sm:text-4xl;
+}
+
+.premium-card {
+  @apply rounded-xl border border-slate-100 bg-white shadow-premium transition-all duration-300 hover:-translate-y-1 hover:shadow-xl;
+}
+
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-lg bg-brand-primary px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#072b43];
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-lg border border-brand-accent bg-brand-accent/10 px-6 py-3 text-sm font-semibold text-brand-primary transition hover:bg-brand-accent/20;
+}
