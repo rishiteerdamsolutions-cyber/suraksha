@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Instrument_Serif, Inter, Playfair_Display } from "next/font/google";
+import faviconPng from "@/favicon.png";
+import logoPng from "@/logo.png";
 import "./globals.css";
 
 const inter = Inter({
@@ -50,18 +52,32 @@ export const metadata: Metadata = {
     url: "/",
     siteName: "Suraksha Hospital",
     locale: "en_IN",
-    type: "website"
+    type: "website",
+    images: [
+      {
+        url: logoPng.src,
+        width: 512,
+        height: 512,
+        alt: "Suraksha Hospital Logo"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: "Suraksha Hospital, Karimnagar | Advanced Orthopedic Care",
     description:
-      "Trusted orthopedic care in Karimnagar: joint replacement, fractures, sports injuries, spine care, and physiotherapy."
+      "Trusted orthopedic care in Karimnagar: joint replacement, fractures, sports injuries, spine care, and physiotherapy.",
+    images: [logoPng.src]
+  },
+  icons: {
+    icon: [{ url: faviconPng.src, type: "image/png" }],
+    apple: [{ url: logoPng.src, type: "image/png" }]
   },
   robots: {
     index: true,
     follow: true
-  }
+  },
+  manifest: "/manifest.webmanifest"
 };
 
 export default function RootLayout({

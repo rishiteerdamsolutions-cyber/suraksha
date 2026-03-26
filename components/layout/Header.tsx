@@ -1,5 +1,7 @@
 import { Activity, PhoneCall } from "lucide-react";
+import Image from "next/image";
 import { DISPLAY_PHONE } from "@/lib/contact";
+import logo from "@/logo.png";
 
 const navLinks = [
   { label: "Home", href: "#home" },
@@ -14,8 +16,11 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/95 backdrop-blur">
       <div className="section-shell flex h-20 items-center justify-between gap-2">
-        <a href="#home" className="font-[var(--font-playfair)] text-2xl font-bold text-brand-primary sm:text-3xl">
-          Suraksha Hospital
+        <a href="#home" className="flex items-center gap-2">
+          <Image src={logo} alt="Suraksha Hospital Logo" className="h-9 w-9 rounded-lg object-cover sm:h-10 sm:w-10" />
+          <span className="font-[var(--font-playfair)] text-2xl font-bold text-brand-primary sm:text-3xl">
+            Suraksha Hospital
+          </span>
         </a>
         <div className="flex items-center gap-2">
           <a

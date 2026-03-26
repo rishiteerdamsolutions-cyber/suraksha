@@ -11,6 +11,7 @@ import PhysioSection from "@/components/sections/PhysioSection";
 import ReviewsSection from "@/components/sections/ReviewsSection";
 import ServicesSection from "@/components/sections/ServicesSection";
 import { DISPLAY_PHONE } from "@/lib/contact";
+import InstallAppPrompt from "@/components/ui/InstallAppPrompt";
 
 export default function Home() {
   const hospitalJsonLd = {
@@ -34,6 +35,7 @@ export default function Home() {
   return (
     <main className="overflow-x-hidden pb-24 md:pb-0">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(hospitalJsonLd) }} />
+      <InstallAppPrompt />
       <Header />
       <HeroSection />
       <AboutSection />
